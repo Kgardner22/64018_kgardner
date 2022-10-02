@@ -1,0 +1,51 @@
+---
+title: "Module 4 Assignment"
+author: "Kevin Gardner"
+date: '2022-10-02'
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+dir.create("images")
+```
+
+# ------------------------------------------------
+# Following is the link to my GitHub account:
+# https://github.com/Kgardner22/64018_kgardner
+# ------------------------------------------------
+
+LP Problem: The Weigelt Corporation
+
+Install lpSolveAPI
+
+```{r}
+install.packages("lpSolveAPI")
+```
+
+load the needed library
+```{r}
+library(lpSolveAPI)
+```
+
+We will setup the Weigelt Corporation problem. Note, we have nine (9) decision variables and twelve (12) constraints. We also have nine (9) non-negativity constraints.
+
+We will read the lp formulation using an lp file. 
+
+```{r}
+x <- read.lp("Weigelt.lp") # create an lp object x
+x                          # display x
+```
+
+Solve the lp model
+
+```{r}
+solve(x)
+get.objective(x)        # get objective value
+get.variables(x)        # get values of decision variables
+get.constraints(x)      # get constraint RHS values
+```
+
+
+
+
