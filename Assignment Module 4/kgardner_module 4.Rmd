@@ -35,7 +35,7 @@ load the needed library
 library(lpSolveAPI)
 ```
 
-We will setup the Weigelt Corporation problem. Note, we have nine (9) decision variables and twelve (12) constraints. We also have nine (9) non-negativity constraints.
+We will setup the Weigelt Corporation problem. Note, we have nine (9) decision variables and twelve (12) constraints. We also have nine (9) non-negativity constraints, however, these do not need defined as the default sets the lower limit to zero (0).
 
 We will read the lp formulation using an lp file. 
 
@@ -55,6 +55,22 @@ get.constraints(x)      # get constraint RHS values
 
 ```
 
+Interpreting the Results:
+
+For the Weigelt Corporation, our objective is to determine the maximum profit to be realized by determining how many Large, Medium, and Small units need to be produced at Plant 1, Plant 2, and Plant 3 given the defined constraints.
+
+Our solution above provides this answer. The results are as follows:
+
+Maximum Profit = $696,000
+
+To realize this profit, we need to produce the units as follows:
+
+  Large: 517 at Plant 1; 0 at Plant 2; and 0 at Plant 3;
+
+  Medium: 178 at Plant 1; 667 at Plant 2; and 0 at Plant 3;
+
+  Small: 0 at Plant 1; 167 at Plant 2; and 417 at Plant 3;
 
 
+Note: Quantities were rounded since we would not produce partial units. Therefore, actual realized profit may vary slightly.
 
