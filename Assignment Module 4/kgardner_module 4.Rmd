@@ -2,7 +2,11 @@
 title: "Module 4 Assignment"
 author: "Kevin Gardner"
 date: '2022-10-02'
-output: word_document
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -17,11 +21,13 @@ dir.create("images")
 
 LP Problem: The Weigelt Corporation
 
-Install lpSolveAPI
+If lpSolveAPI is not already installed, remove the "*" preceeding lines 26-30 and run the block:
 
-```{r}
-install.packages("lpSolveAPI")
-```
+*Install lpSolveAPI
+
+*```{r}
+*install.packages("lpSolveAPI")
+*```
 
 load the needed library
 ```{r}
