@@ -30,6 +30,7 @@ If lpSolveAPI is not already installed, remove the "*" preceeding lines 26-30 an
 *```
 
 load the needed library
+
 ```{r}
 library(lpSolveAPI)
 ```
@@ -46,10 +47,12 @@ x                          # display x
 Solve the lp model
 
 ```{r}
+
 solve(x)
 get.objective(x)        # get objective value
 get.variables(x)        # get values of decision variables
 get.constraints(x)      # get constraint RHS values
+
 ```
 
 
